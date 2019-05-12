@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Get </title>
+</head>
+
+	<body>
+<form method="get" name="details" id="details">
+    <label for="fname">First Name: </label>
+    <input type="text" placeholder="First Name" name="fname" id="fname"/>
+    <label for="lname">Last Name: </label>
+    <input type="text" id="lname" placeholder="Last Name" name="lname" />
+    <label for="age">Age: </label>
+    <select id="age" name="Age">
+        <option value="0-10">0 - 10</option>
+        <option value="10-20">10 - 20</option>
+        <option value="20-30">20 - 30</option>
+        <option value="30-40" selected>30 - 40</option>
+        <option value="40-50">40 - 50</option>
+        <option value="50-60">50 - 60</option>
+    </select>
+    <!--<label for="password">Password: </label>
+    <input type="password" name="password" id="password" />-->
+    <button name="Submit" id="submit" type="submit"  value="Submit">Submit</button>
+    <!--<input type="submit" name="submit" id="submit" />-->
+        </form>
+</body>
+<script>
+    var form = document.getElementById("details");
+    //console.log(form.tagName);
+    form.onsubmit = function(e) {
+        e.preventDefault();
+        console.log(form.fname.value);
+        console.log(form.lname.value);
+        console.log(form.Age.value);
+        //form.reset();
+        console.log("Hi, " + form.fname.value + " " + form.lname.value);
+    };
+</script>
+</html>
